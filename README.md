@@ -130,9 +130,14 @@ Add the following configuration to your MCP client settings:
 // ~/Library/Application\ Support/Claude/claude_desktop_config.json
 {
   "mcpServers": {
-    "dremio-mcp": {
-      "command": "mcp-dremio-server",
-      "args": []
+    "dremio_service": {
+      "command": "/Users/USERNAME/.local/bin/uv",
+      "args": [
+                "--directory",
+                "/Users/USERNAME/PycharmProjects/dremio-python-mcp",
+                "run",
+                "run_mcp_server.py"
+            ]
     }
   }
 }
