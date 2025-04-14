@@ -27,11 +27,6 @@ Exposes Dremio data through **Resources**:
   * Lists all tables in a specific schema
   * Usage: `list_tables("catalog_name", "schema_name")`
 
-* **create_select_statement**
-  * Generates a SELECT statement for a specific table
-  * Includes all columns with proper quoting
-  * Usage: `create_select_statement("catalog.schema.table")`
-
 * **execute_sql**
   * Executes a SQL query against Dremio
   * Returns results in a structured format with metadata
@@ -171,13 +166,9 @@ list_schemas("my_catalog")
 list_tables("my_catalog", "my_schema")
 ```
 
-### Creating and Executing SQL Queries
+### Executing SQL Queries
 
 ```
-// Generate a SELECT statement for a table
-select_statement = create_select_statement("my_catalog.my_schema.my_table")
-print(select_statement["sql"])
-
 // Execute a query
 results = execute_sql("SELECT * FROM my_catalog.my_schema.my_table LIMIT 10")
 ```
