@@ -170,7 +170,14 @@ class DremioResource:
             sql: SQL query to execute
             
         Returns:
-            Dictionary with query results and metadata
+            Dict[str, Any]: Dictionary with three keys:
+                - data: List of row dictionaries
+                - rowCount: Number of rows returned
+                - sql: The original SQL query
+                
+        Raises:
+            ValueError: If the SQL query contains forbidden operations
+            Exception: If the Dremio connection fails or the query execution fails
         """
         try:
             logger.info(f"Executing SQL query: {sql}")

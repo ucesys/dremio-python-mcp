@@ -3,6 +3,6 @@ revision = 1
 requires-python = ">=3.11"
 
 [[package]]
-name = "dremio-mcp-server"
+name = "mcp-dremio-server"
 version = "0.1.0"
 source = { editable = "." }
