@@ -1,0 +1,35 @@
+# Dremio MCP Server Configuration
+
+# Dremio connection settings
+dremio:
+  # Connection type: 'software' for Dremio Software or 'cloud' for Dremio Cloud
+  type: software
+  
+  # Dremio Software connection details
+  software:
+    hostname: "localhost"
+    port: 32010
+    username: dremio
+    password: "dremiopassword"
+    use_ssl: false
+    
+  # Dremio Cloud connection details
+  cloud:
+    endpoint: "data.dremio.cloud"
+    pat_token: "your_personal_access_token"
+
+# Query settings
+query:
+  # Maximum number of rows to return in a query result
+  max_rows: 10000
+  
+  # Maximum number of columns to return in schema request
+  max_columns: 1000
+  
+  # Timeout in seconds for query execution
+  timeout: 300
+  
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: null  # Set to a path to enable file logging, e.g., "logs/mcp_dremio.log"
