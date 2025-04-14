@@ -1,7 +1,7 @@
 [project]
-name = "minio_mcp_server"
+name = "mcp-dremio-server"
 version = "0.1.0"
-description = "Model-Context Protocol (MCP) server and client for MinIO"
+description = "Model-Context Protocol (MCP) server and client for Dremio"
 
 
 [[project.authors]]
@@ -26,4 +26,4 @@ build-backend = "hatchling.build"
 mcp-dremio-server = "mcp_dremio_server.main:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src/mcp_dremio_server"]
